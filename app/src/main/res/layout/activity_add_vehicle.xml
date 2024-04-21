@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Action bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Vehicle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF0000"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:title="Vehicle"
+        app:titleTextColor="@color/white" />
+
+    <!--Home Page Image/Header-->
+    <ImageView
+        android:id="@+id/homePageImg"
+        android:layout_width="237dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/toolbar_Vehicle"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/header_homepage" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/textBoxDetails"
+        android:orientation="vertical"
+        android:layout_below="@+id/homePageImg"
+        android:weightSum="3">
+
+        <!--Vehicle List Text-->
+        <TextView
+            android:id="@+id/VehicleListText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homePageImg"
+            android:layout_marginTop="10dp"
+            android:text="Details"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/VehicleNumberText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/homePageImg"
+            android:layout_marginTop="10dp"
+            android:text="Vehicle Number"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/vehicleNumberInput"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/vehicleNumberText"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:padding="10dp"
+            android:hint="WWW123"
+            android:maxLength="12"
+            android:background="@drawable/vehicle_number_box"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/submitVehicleButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_border"
+        android:onClick="OnButtonSubmitButtonClick"
+        android:text="Add"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

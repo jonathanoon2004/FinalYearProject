@@ -1,0 +1,142 @@
+<resources>
+    <string name="app_name">Sunway Campus Parking App</string>
+
+    // Parking Lot Number Floor
+    <string-array name="parking_lot_floor">
+        <item>G (Ground Floor)</item>
+        <item>B1 (Basement 1)</item>
+    </string-array>
+
+    // Home Page
+    <string name="homePageImage">
+        Sunway Parking Logo
+    </string>
+    <string name="seeMore">
+        See More >
+    </string>
+    <string name="help">
+        Help
+    </string>
+    <string name="helpImage">
+        Help Button
+    </string>
+    <string name="availableParkingSpace">
+        Available Parking Space
+    </string>
+    <string name="historyImage">
+        History Button
+    </string>
+    <string name="history">
+        History
+    </string>
+    <string name="vehicleImage">
+        Vehicle Button
+    </string>
+    <string name="vehicle">
+        Vehicle
+    </string>
+    <string name="seasonImage">
+        Season Button
+    </string>
+    <string name="season">
+        Season
+    </string>
+
+    //Content Description
+    <string name="arrowExpand">
+        Expand
+    </string>
+    <string name="parkingInfo">
+        PARKING INFORMATION
+    </string>
+    <string name="vehicleNum">
+        Vehicle Number
+    </string>
+    <string name="parkedTime">
+        Parked Time
+    </string>
+    <string name="parkingStat">
+        Parking Status
+    </string>
+    <string name="avai">
+        Available
+    </string>
+    <string name="parkingLotNum">
+        Parking Lot Number
+    </string>
+
+    // Help Info 1
+    <string name="help1text">
+        How do I use the app?
+    </string>
+    <string name="help1">
+        Step 1: Add a vehicle number in the Vehicle Section.
+        \nStep 2: Set a vehicle as primary.
+        \nStep 3: Select the floor you parked your vehicle.
+        \nStep 4: Type your parking lot number.
+        \nStep 5: Click on &quot;Start Parking&quot; button.
+        \n*The timer will start to track your parking time.*
+        \nStep 6: Click on &quot;End Parking&quot; button to end parking.
+        \nStep 7: Click on &quot;Pay&quot; button to pay for parking.
+        \n*Will redirect you to the Sunway Official Payment Website.*
+    </string>
+
+    // Help Info 2
+    <string name="help2text">
+        Display vehicle number (Home Page)
+    </string>
+    <string name="help2">
+        How do I display the vehicle number on the home page:
+        \nStep 1: Go to Vehicle Page.
+        \nStep 2: Click on the "add" button to add a vehicle number.
+        \nStep 3: Long click on the chosen vehicle to set as primary.
+        \nStep 4: Return to home page.
+        \n
+        \nHow do I change the primary vehicle?
+        \nStep 1: Click on the "add" button to add a vehicle number.
+        \nStep 2: Add another vehicle number.
+        \nStep 3: Long click on the preferred vehicle number.
+    </string>
+
+    // Help Info 3
+    <string name="help3text">
+        Features of the app
+    </string>
+    <string name="help3">
+        Features of the app as the following:
+        \nGet live view of the parking lots available.
+        \nGet an estimated time on the time parked in the parking lot.
+        \nWrite down your parking lot number for future reference.
+        \nCheck the user parking history.
+    </string>
+
+    // Help Info 4
+    <string name="help4text">
+        Parking rates
+    </string>
+    <string name="help4">
+        Monday to Friday
+        \nFirst hour or part thereof - RM1
+        \nSubsequent hour or part thereof - RM1
+        \nMaximum per entry per day - RM5
+        \n
+        \nSaturday, Sunday &amp; Public Holidays
+        \nFirst hour or part thereof - RM1
+        \nSubsequent hour or part thereof - RM1
+        \nMaximum per entry per day - RM5
+        \n
+        \nLost Ticket - RM30
+    </string>
+
+    // Help Info 5
+    <string name="help5text">
+        I found a bug/error in the system
+    </string>
+    <string name="help5">
+        If you found a bug or error, please contact through email - @jonathanxsoon@gmail.com.
+        \n*Please note that this is a beta version, some features are not available:
+        \n1. Season Pass
+        \n2. Payment System
+    </string>
+
+</resources>

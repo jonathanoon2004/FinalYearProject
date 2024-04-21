@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/vehicleImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/vehicle_img" />
+
+    <!-- Vehicle Number -->
+    <TextView
+        android:id="@+id/vehicleNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@id/vehicleImage"
+        android:layout_centerVertical="true"
+        android:text="ABC123"
+        android:textColor="@color/black"
+        android:textAllCaps="true"
+        android:textSize="20dp"/>
+
+    <!--Delete Button-->
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="Delete"
+        android:background="@drawable/button_border"/>
+
+</RelativeLayout>

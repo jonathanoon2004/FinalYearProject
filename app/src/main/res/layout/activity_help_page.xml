@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!--Action bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF0000"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:title="Help"
+        app:titleTextColor="@color/white" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/toolbar">
+
+        <!--Help 1-->
+        <TextView
+            android:id="@+id/heading1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help1text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button1"
+            app:layout_constraintBottom_toBottomOf="@+id/button1" />
+
+        <ImageView
+            android:id="@+id/button1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@string/arrowExpand"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/heading1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="20dp"
+            android:text="@string/help1"
+            android:visibility="gone"/>
+
+
+
+        <!--Help 2-->
+        <TextView
+            android:id="@+id/heading2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help2text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button2"
+            app:layout_constraintBottom_toBottomOf="@+id/button2" />
+
+        <ImageView
+            android:id="@+id/button2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@string/arrowExpand"
+            app:layout_constraintTop_toBottomOf="@+id/text1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/heading2"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="20dp"
+            android:text="@string/help2"
+            android:visibility="gone" />
+
+
+
+        <!--Help 3-->
+        <TextView
+            android:id="@+id/heading3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help3text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button3"
+            app:layout_constraintBottom_toBottomOf="@+id/button3" />
+
+        <ImageView
+            android:id="@+id/button3"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@string/arrowExpand"
+            app:layout_constraintTop_toBottomOf="@+id/text2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/heading3"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="20dp"
+            android:text="@string/help3"
+            android:visibility="gone" />
+
+
+        <!--Help 4-->
+        <TextView
+            android:id="@+id/heading4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help4text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button4"
+            app:layout_constraintBottom_toBottomOf="@+id/button4" />
+
+        <ImageView
+            android:id="@+id/button4"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@string/arrowExpand"
+            app:layout_constraintTop_toBottomOf="@+id/text3"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/heading4"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="20dp"
+            android:text="@string/help4"
+            android:visibility="gone" />
+
+
+        <!--Help 5-->
+        <TextView
+            android:id="@+id/heading5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/help5text"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/button5"
+            app:layout_constraintBottom_toBottomOf="@+id/button5" />
+
+        <ImageView
+            android:id="@+id/button5"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_arrow_down"
+            android:contentDescription="@string/arrowExpand"
+            app:layout_constraintTop_toBottomOf="@+id/text4"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/heading5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:padding="20dp"
+            android:text="@string/help5"
+            android:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

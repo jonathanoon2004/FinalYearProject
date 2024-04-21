@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--Action bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF0000"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:title="Sunway Campus Parking App"
+        app:titleTextColor="@color/white" />
+
+    <!-- Row 1 -->
+    <LinearLayout
+        android:id="@+id/row1Box"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/toolbar"
+        android:weightSum="2" >
+
+        <!--Parking View Box-->
+        <RelativeLayout
+            android:id="@+id/column1Row1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp">
+
+            <RelativeLayout
+                android:id="@+id/parkingView"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:background="@drawable/parking_view_box">
+
+                <TextView
+                    android:id="@+id/counterTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ParkingViewButton"
+                    android:layout_centerInParent="true"
+                    android:hint="200"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:textSize="50sp" />
+
+                <Button
+                    android:id="@+id/ParkingViewButton"
+                    android:layout_width="150dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="onButtonParkingViewClick"
+                    android:text="@string/seeMore"
+                    android:textColor="@color/black"
+                    android:background="@drawable/parking_view_button"/>
+
+            </RelativeLayout>
+
+            <!--Parking View Text-->
+            <TextView
+                android:id="@+id/parkingViewText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/parkingView"
+                android:layout_marginTop="10dp"
+                android:text="@string/availableParkingSpace"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <!--Home Page Image/Header-->
+        <ImageView
+            android:id="@+id/homePageImg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/header_homepage"
+            android:contentDescription="@string/homePageImage"/>
+
+    </LinearLayout>
+
+
+
+    <!-- Row 2 -->
+    <LinearLayout
+        android:id="@+id/row2"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_below="@+id/row1Box"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/button_box"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:baselineAligned="false">
+
+        <!--Vehicle Button-->
+        <RelativeLayout
+            android:id="@+id/buttonVehicleBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/buttonVehicle"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onButtonVehicleClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/vehicle_img"
+                android:contentDescription="@string/vehicleImage"/>
+
+            <TextView
+                android:id="@+id/buttonVehicleText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/buttonVehicle"
+                android:layout_centerInParent="true"
+                android:text="@string/vehicle"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <!--Season Button-->
+        <RelativeLayout
+            android:id="@+id/buttonSeasonBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/buttonSeason"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onButtonSeasonClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/season_img"
+                android:contentDescription="@string/seasonImage"/>
+
+            <TextView
+                android:id="@+id/buttonSeasonText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/buttonSeason"
+                android:layout_centerInParent="true"
+                android:text="@string/season"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <!--Help Button-->
+        <RelativeLayout
+            android:id="@+id/buttonHelpBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+
+            <ImageButton
+                android:id="@+id/buttonHelp"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerHorizontal="true"
+                android:background="?android:selectableItemBackground"
+                android:onClick="onButtonHelpClick"
+                android:scaleType="centerInside"
+                android:src="@drawable/help_img"
+                android:contentDescription="@string/helpImage"/>
+
+            <TextView
+                android:id="@+id/buttonHelpText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/buttonHelp"
+                android:layout_centerInParent="true"
+                android:text="@string/help"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!--Pay Parking Fee Text-->
+    <TextView
+        android:id="@+id/parkingInfoText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row2"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/parkingInfo"
+        android:textStyle="bold"/>
+
+
+
+    <!-- Row 3 -->
+    <RelativeLayout
+        android:id="@+id/row3"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/parkingInfoText"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp">
+
+        <!--Left Side Parking Information-->
+        <RelativeLayout
+            android:id="@+id/parkingInfoHomePageLeft"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content">
+
+            <!--Vehicle Number-->
+            <TextView
+                android:id="@+id/vehicleNumberText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/vehicleNum" />
+
+            <TextView
+                android:id="@+id/vehicleNumberBox"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/vehicleNumberText"
+                android:gravity="center"
+                android:padding="8dp"
+                android:hint="CAR1"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:background="@drawable/vehicle_number_box"/>
+
+            <!--Parked Time-->
+            <TextView
+                android:id="@+id/parkingTimeText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/vehicleNumberBox"
+                android:text="@string/parkedTime"/>
+
+            <Chronometer
+                android:id="@+id/chronometer"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/parkingTimeText"
+                android:gravity="center"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:background="@drawable/parked_time_box"
+                android:format="%s"/>
+
+        </RelativeLayout>
+
+        <!--Right Side Parking Information-->
+        <RelativeLayout
+            android:id="@+id/parkingInfoHomePageRight"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" >
+
+            <!--Status-->
+            <TextView
+                android:id="@+id/statusText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/parkingStat" />
+
+            <TextView
+                android:id="@+id/statusBox"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@+id/statusText"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/avai"
+                android:textColor="@color/black"
+                android:background="@drawable/status_box"/>
+
+            <!--Parking Lot Number Text-->
+            <TextView
+                android:id="@+id/parkingLotNumText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/statusBox"
+                android:layout_marginTop="20dp"
+                android:text="@string/parkingLotNum"/>
+
+            <Spinner
+                android:id="@+id/parkingLotNumBox1"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/parkingLotNumText"
+                android:background="@drawable/parking_lot_number_spinner_box"/>
+
+            <EditText
+                android:id="@+id/parkingLotNumBox2"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_below="@+id/parkingLotNumText"
+                android:layout_alignParentRight="true"
+                android:maxLength="3"
+                android:hint="001"
+                android:inputType="number"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@drawable/parking_lot_number_box"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <!-- Row 4 -->
+    <RelativeLayout
+        android:id="@+id/parkingInfoButtonBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row3"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true" >
+
+        <!--Start/Stop Button-->
+        <Button
+            android:id="@+id/startStopButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="onButtonStartClick"
+            android:text="Start Parking"
+            android:textColor="@color/black"
+            android:background="@drawable/button_border"/>
+
+        <!--End Timer Button-->
+        <Button
+            android:id="@+id/endButton"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:onClick="onButtonEndClick"
+            android:text="End Parking"
+            android:textColor="@color/black"
+            android:background="@drawable/button_border"/>
+
+        <!--Pay Button-->
+        <Button
+            android:id="@+id/payButton"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/startStopButton"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/button_border"
+            android:onClick="onButtonPayClick"
+            android:text="Pay"
+            android:textColor="@color/black" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
+

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Action bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Vehicle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF0000"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:title="Parking History"
+        app:titleTextColor="@color/white" />
+
+    <!--Home Page Image/Header-->
+    <ImageView
+        android:id="@+id/homePageImg"
+        android:layout_width="237dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/toolbar_Vehicle"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/header_homepage" />
+
+    <!--History Text-->
+    <TextView
+        android:id="@+id/HistoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homePageImg"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        android:text="Parking History"
+        android:textColor="@color/black"/>
+
+    <!--No History Text-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="No History" />
+
+    <!--History List Box-->
+    <RelativeLayout
+        android:id="@+id/HistoryListBox"
+        android:layout_width="match_parent"
+        android:layout_height="327dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_below="@+id/HistoryText" >
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

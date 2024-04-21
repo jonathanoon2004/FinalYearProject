@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--Action bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_Vehicle"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF0000"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:title="Vehicle"
+        app:titleTextColor="@color/white" />
+
+    <!--Home Page Image/Header-->
+    <ImageView
+        android:id="@+id/homePageImg"
+        android:layout_width="237dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/toolbar_Vehicle"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/header_homepage" />
+
+    <!--Vehicle List Text-->
+    <TextView
+        android:id="@+id/VehicleListText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homePageImg"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="40dp"
+        android:text="Vehicle List"
+        android:textColor="@color/black"/>
+
+    <!--Vehicle List Box-->
+    <RelativeLayout
+        android:id="@+id/vehicleListBox"
+        android:layout_width="match_parent"
+        android:layout_height="330dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@+id/VehicleListText" >
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-2dp"
+            android:layout_marginEnd="0dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/addVehicleButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vehicleListBox"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:onClick="OnButtonPayButtonClick"
+        android:text="Add"
+        android:textColor="@color/black" />
+
+</RelativeLayout>

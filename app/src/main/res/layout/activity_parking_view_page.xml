@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParkingViewPageActivity">
+
+    <!--Action bar-->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FF0000"
+        android:elevation="4dp"
+        android:theme="?attr/actionBarTheme"
+        app:title="Parking Lot"
+        app:titleTextColor="@color/white" />
+
+    <!--Home Page Image/Header-->
+    <ImageView
+        android:id="@+id/homePageImg"
+        android:layout_width="237dp"
+        android:layout_height="136dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/header_homepage" />
+
+    <!-- Text 1 -->
+    <TextView
+        android:id="@+id/textAvailableParking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/homePageImg"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="Total Available Parking: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <!-- Box 1 -->
+    <TextView
+        android:id="@+id/AvailableParking"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/textAvailableParking"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="200"
+        android:textColor="@color/black"
+        android:background="@drawable/number_box"/>
+
+    <!-- Text 2 -->
+    <TextView
+        android:id="@+id/textAvailableParkingGF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AvailableParking"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="Available Ground Floor (GF) Parking: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <!-- Box 2 -->
+    <TextView
+        android:id="@+id/AvailableParkingGF"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/textAvailableParkingGF"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="100"
+        android:textColor="@color/black"
+        android:background="@drawable/number_box"/>
+
+    <!-- Text 3 -->
+    <TextView
+        android:id="@+id/textAvailableParkingB1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/AvailableParkingGF"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="20dp"
+        android:text="Available Basement 1 (B1) Parking: "
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
+    <!-- Box 3 -->
+    <TextView
+        android:id="@+id/AvailableParkingB1"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:layout_below="@+id/textAvailableParkingB1"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="100"
+        android:textStyle="bold"
+        android:background="@drawable/number_box"/>
+
+</RelativeLayout>
